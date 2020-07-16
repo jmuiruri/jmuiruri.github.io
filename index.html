@@ -1,138 +1,136 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Muiruri</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>John Muiruri</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous"> 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <!-- <link rel="stylesheet" href="http://scripts.wottmakplus.com/css/bootstrap.min.css"> -->
-    <!-- <link rel="stylesheet" href="http://scripts.wottmakplus.com/css/font-awesome.min.css"> -->
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/styles.css">
 
-</head>
+    </head>
 
-<body class="position-relative" data-spy="scroll" data-target="#mainnav" data-offset="0">
+    <body class="position-relative" data-spy="scroll" data-target="#mainnav" data-offset="0">
 
-    <div id="loading">
+        <div id="loading">
 
-    <style>
-        #loading {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            z-index: 2000;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            background: #fff;
-        }
+            <style>
+                #loading {
+                    position: fixed;
+                    top: 0;
+                    bottom: 0;
+                    z-index: 2000;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    background: #fff;
+                }
 
-        #loading .loader {
-            text-align: center;
-            margin: auto;
-        }
+                #loading .loader {
+                    text-align: center;
+                    margin: auto;
+                }
 
-        p span::before {
-            animation: dots 2s linear infinite;
-            content: '';
-            font-size:20px;
-            color:green;
-        }
+                p span::before {
+                    animation: dots 2s linear infinite;
+                    content: '';
+                    font-size: 20px;
+                    color: green;
+                }
 
-        @keyframes dots {
-            0%,
-            20% {
-                content: '.'
-            }
+                @keyframes dots {
 
-            40% {
-                content: '..'
-            }
+                    0%,
+                    20% {
+                        content: '.'
+                    }
 
-            60% {
-                content: '...'
-            }
+                    40% {
+                        content: '..'
+                    }
 
-            90%,
-            100% {
-                content: ""
-            }
-        }
-    </style>
+                    60% {
+                        content: '...'
+                    }
+
+                    90%,
+                    100% {
+                        content: ""
+                    }
+                }
+            </style>
 
 
-    <script>
-        window.onload = () => setTimeout(() => document.getElementById("loading").remove(), 10);
-    </script>
+            <script>
+                window.onload = () => setTimeout(() => document.getElementById("loading").remove(), 10);
+            </script>
 
-    <div class="loader">
-        <img src="images/logo.png" alt="John Muiruri">
-        <p>Loading <span></span></p>
-    </div>
-</div>
-    <header id="mainnav">
-        <nav class="navbar navbar-expand-sm navbar-dark bg-d fixed-top">
-            <div class="navbar-brand ml-3">John Muiruri</div>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#mainnav">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#passion">Passion</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item my-auto">
-                        <a class="nav-link btn btn-danger text-white rounded-pill py-2 px-3">Hire Me</a>
-                    </li>
-                </ul>
+            <div class="loader">
+                <img src="images/logo.png" alt="John Muiruri">
+                <p>Loading <span></span></p>
             </div>
-        </nav>
-    </header>
+        </div>
+        <header id="mainnav" class="w-100 bg-d fixed-top">
+            <nav class="navbar navbar-expand-md navbar-dark bg-d ">
+                <div class="navbar-brand ml-3">John Muiruri</div>
 
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#mainnav">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#work">Work</a>
+                        </li>
+                        <li class="nav-item my-auto">
+                            <a class="nav-link btn btn-danger text-white rounded-pill py-2 px-3" href="#contact">Hire Me</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
-    <main>
-        <section class="top" id="top">
-            <div class="bg-overlay">
-                <h2>Hi I'm John Muiruri</h2>
-                <button class="btn btn-lg btn-danger rounded-pill px-3">Hire Me</button>
-                <!-- <span>
+        <main>
+            <section class="top" id="top">
+                <div class="bg-overlay">
+                    <h2>Hi I'm John Muiruri</h2>
+                    <button class="btn btn-lg btn-danger rounded-pill px-3">Hire Me</button>
+                    <!-- <span>
                     <i class="fa fa-arrow-down"></i>
                 </span> -->
-            </div>
-        </section>
-
-        <section id="about" class="px-2 py-3 bg-white">
-            <h2 class="text-center my-2">About Me</h2>
-            <div class="row col-12 col-sm-6 mx-auto">
-                <img src="images/coding languages.jpg" class="mx-auto rounded-circle" id="profile-img" alt="">
-
-                <div class="w-100 py-3">
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius itaque, quo repellat reiciendis dolore, nostrum explicabo magnam tempora unde, nulla consequuntur suscipit! Ducimus, eos quidem laborum labore obcaecati excepturi eum.</p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- <section id="experience" class="p-5 bg-success">
+            <section id="about" class="px-2 py-3 bg-white">
+                <h2 class="text-center my-2">About Me</h2>
+                <div class="row col-12 col-sm-8 col-md-6 mx-auto">
+                    <img src="images/coding languages.jpg" class="mx-auto rounded-circle" id="profile-img" alt="">
+
+                    <div class="w-100 py-3">
+                        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius itaque, quo repellat reiciendis dolore, nostrum explicabo magnam tempora unde, nulla consequuntur suscipit! Ducimus, eos quidem laborum labore obcaecati excepturi eum.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- <section id="experience" class="p-5 bg-success">
             <h2 class="text-center mb-3">Experience</h2>
             <div class="row col-12 col-sm-10 mx-auto">
                 <div class="col-12 col-sm my-auto">
@@ -147,178 +145,305 @@
             </div>
         </section> -->
 
-        <section id="passion" class="p-2 p-sm-5 bg-light">
-            <div class="text-center">
-                <h2 class="my-3">My Skills</h2>
-            </div>
+            <section id="skills" class="p-2 p-sm-5 bg-light">
+                <div class="text-center">
+                    <h2 class="my-3">My Skills</h2>
+                </div>
+                <div class="container-fluid p-1 p-sm-2">
+                    <div class="row col-12 col-sm-8 mx-auto text-center">
+                        <div class="col-12 col-sm">
+                            <span class="icon shadow">
+                                <i class="fa fa-laptop"></i>
+                            </span>
+                            <h4 class="my-3">Web Development</h4>
 
-            <div class="container-fluid p-1 p-sm-2">
-                <div class="row col-12 col-sm-8 mx-auto text-center">
-                    <div class="col-12 col-sm">
-                        <span class="icon shadow">
-                            <i class="fa fa-laptop"></i>
-                        </span>
-                        <h4 class="my-3">Web Development</h4>
+                            <div class="row col-12 col-sm-10 mx-auto">
+                                <div class="skill">Html 5</div>
+                                <div class="skill">CSS 3</div>
+                                <div class="skill">PHP</div>
 
-                        <div class="row col-12 col-sm-10 mx-auto">
-                            <div class="skill">Html 5</div>
-                            <div class="skill">CSS 3</div>
-                            <div class="skill">PHP</div>
+                                <div class="w-100 my-3"></div>
+                                <div class="skill">MySQL</div>
 
-                            <div class="w-100 my-3"></div>
+                                <div class="skill">ES6 Javascript</div>
+                                <div class="skill">React</div>
 
-                            <div class="skill">ES6 Javascript</div>
-                            <div class="skill">React</div>
-
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm mt-5 mt-sm-auto mb-auto">
+                            <span class="icon android shadow">
+                                <i class="fa fa-mobile"></i>
+                            </span>
+                            <h4 class="mt-4">Android Development</h4>
+                            <div class="row col-12 col-sm-6 mx-auto p-3 p-sm-auto">
+                                <div class="skill">Java</span></div>
+                                <div class="skill">Android</span></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm mt-5 mt-sm-auto mb-auto">
-                        <span class="icon android shadow">
-                            <i class="fa fa-mobile"></i>
-                        </span>
-                        <h4 class="mt-4">Android Development</h4>
-                        <div class="row col-12 col-sm-6 mx-auto p-3 p-sm-auto">
-                            <div class="skill">Java</span></div>
-                            <div class="skill">Android</span></div>
+            </section>
+
+            <section id="experience" class="p-2 p-sm-5 bg-success text-white">
+                <h2 class="text-center mb-3">Experience</h2>
+                <div class="row col-12 col-md-11 mx-auto">
+                    <div class="col-12 col-sm m-auto">
+                        <img src="svg/innovation_.svg" alt="">
+                    </div>
+                    <div class="col-12 col-sm-8 col-md my-2 my-sm-1">
+                        <p>Having been in the industry as a developer for 3 years i have come to learn alot and worked with various technologies including : </p>
+
+                        <ul class="row">
+                            <div class="col">
+                                <li>Html 5</li>
+                                <li>CSS3</li>
+                                <li>Javascript</li>
+                                <li>Angular</li>
+                                <li>React</li>
+                                <li>Firebase</li>
+                            </div>
+                            <div class="col">
+                                <li>PHP</li>
+                                <li>Laravel</li>
+                                <li>MySQL</li>
+                                <li>Java</li>
+                                <li>Android</li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="w-100 p-1 bg-light"></div>
+
+
+            <section id="work" class="p-2 p-sm-5 bg-white">
+                <h2 class="text-center my-3">What I've done</h2>
+
+                <div class="container-fluid">
+                    <div class="w-100 row m-0">
+                        <a href="images/projects/wottmakplus.png" class="col-12 col-sm">
+                            <img src="images/projects/wottmakplus.png" alt="">
+                            <div class="work-name">Wottmak Plus
+                                <div data-href="http://wottmakplus.com/web/guide.html" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
+                            </div>
+                        </a><a href="images/projects/dimewise.png" class="col-12 col-sm">
+                            <img src="images/projects/dimewise.png" alt="">
+                            <div class="work-name">Dime Wise
+                                <div data-href="http://localhost/www/freelance/dimewise_OLD" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
+                            </div>
+                        </a><a href="images/projects/vendor.png" class="col-12 col-sm">
+                            <img src="images/projects/vendor.png" alt="">
+                            <div class="work-name">Wottmak Vendor Console
+                                <div data-href="http://shop.localhost/vendor/" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
+                            </div>
+                        </a><a href="images/projects/new_dimewise.png" class="col-12 col-sm">
+                            <img src="images/projects/new_dimewise.png" alt="">
+                            <div class="work-name">Dime Wise
+                                <div data-href="http://localhost/www/freelance/dimewise" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
+                            </div>
+                        </a>
+                        <div class="w-100 my-sm-1 p-sm-1"></div><a href="images/projects/shop.png" class="col-12 col-sm">
+                            <img src="images/projects/shop.png" alt="">
+                            <div class="work-name">Wottmak Shop
+                                <div data-href="http://wottmakplus.com" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
+                            </div>
+                        </a><a href="images/projects/publish.png" class="col-12 col-sm">
+                            <img src="images/projects/publish.png" alt="">
+                            <div class="work-name">Wottmak Publish Shop
+                                <div data-href="http://shop.localhost/publish/" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
+                            </div>
+                        </a><a href="images/projects/console.png" class="col-12 col-sm">
+                            <img src="images/projects/console.png" alt="">
+                            <div class="work-name">Wottmak Angular Console
+                                <div data-href="http://console.wottmakplus.com" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section id="testimonials" class="bg-lightd bg-white p-1 p-sm-5">
+
+                <div class="text-center title pb-3">
+                    <h3>Clients Feedback</h3>
+                    <span class="bg-dw-alt"></span>
+                </div>
+
+                <div class="owl-carousel owl-theme text-center mx-1 mx-sm-3">
+
+                    <div class="card shadow-sm p-2 mx-2 my-auto">
+                        <div class="row no-gutters">
+                            <div class="col-12 col-sm my-auto">
+                                <img src="images/testimonials/laptop.jpg" alt="">
+                            </div>
+                            <div class="col-12 col-lg-8 mt-2 mt-md-0">
+                                <div class="t-content">
+                                    <h4>Joshua C Njoroge</h4>
+                                    <h6>Co-CEO, Wottmak Plus</h6>
+                                    <div class="card-text px-3 pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus asperiores laborum quia cum molestias pariatur </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm p-2 mx-2 my-auto">
+                        <div class="row no-gutters">
+                            <div class="col-12 col-sm my-auto">
+                                <img src="images/testimonials/laptop.jpg" alt="">
+                            </div>
+                            <div class="col-12 col-lg-8 mt-2 mt-md-0">
+                                <div class="t-content">
+                                    <h4>James Kimani</h4>
+                                    <h6>CEO, Dime Wise Investments Limited</h6>
+                                    <div class="card-text px-3 pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus asperiores laborum quia cum molestias pariatur </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-        </section>
 
-        <section id="experience" class="p-2 p-sm-5 bg-success text-white">
-            <h2 class="text-center mb-3">Experience</h2>
-            <div class="row col-12 col-sm-10 mx-auto">
-                <div class="col-12 col-sm">
-                    <img src="svg/innovation_.svg" alt="">
-                </div>
-                <div class="col-12 col-sm my-auto">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nam adipisci eius fugit quibusdam! Facere dicta deserunt error dolorum, qui nam ex quibusdam iste, placeat animi optio dolor dolore aperiam aut assumenda vel modi amet! Facilis fuga qui quos consectetur?</p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <div class="w-100 p-1 bg-light"></div>
+            <section id="services" class="p-2 p-sm-5 bg-light">
+                <h2 class="text-center mb-4">My Services</h2>
 
-        <section id="work" class="p-2 p-sm-5 bg-white">
-            <h2 class="text-center my-3">What I've done</h2>
+                <div class="container-fluid p-3">
+                    <div class="row m-0 w-100 text-center">
 
-            <div class="container-fluid">
-                <div class="w-100 row m-0">
-                    <a href="images/projects/wottmakplus.png" class="col-12 col-sm">
-                        <img src="images/projects/wottmakplus.png" alt="">
-                        <div class="work-name">Wottmak Plus</div>
-                    </a>
-                    <a href="images/projects/dimewise.png" class="col-12 col-sm">
-                        <img src="images/projects/dimewise.png" alt="">
-                        <div class="work-name">Dime Wise</div>
-                    </a>
-                    <a href="images/projects/new_dimewise.png" class="col-12 col-sm">
-                        <img src="images/projects/new_dimewise.png" alt="">
-                        <div class="work-name">Dime Wise </div>
-                    </a>
-
-                    <div class="w-100 my-sm-1 p-sm-1"></div>
-
-                    <a href="images/projects/vendor.png" class="col-12 col-sm">
-                        <img src="images/projects/vendor.png" alt="">
-                        <div class="work-name">Wottmak Vendor Console</div>
-                    </a>
-                    <a href="images/projects/shop.png" class="col-12 col-sm">
-                        <img src="images/projects/shop.png" alt="">
-                        <div class="work-name">Wottmak Shop</div>
-                    </a>
-                    <a href="images/projects/publish.png" class="col-12 col-sm">
-                        <img src="images/projects/publish.png" alt="">
-                        <div class="work-name">Wottmak Publish Shop</div>
-                    </a>
-                </div>
-            </div>
-
-        </section>
-
-        <section id="services" class="p-2 p-sm-5 bg-light">
-            <h2 class="text-center mb-4">My Services</h2>
-
-            <div class="container-fluid p-3">
-                <div class="row m-0 w-100 text-center">
-                    <div class="col-12 col-sm">
-                        <span class="icon bg-success">
-                            <i class="fa fa-laptop"></i>
-                        </span>
-                        <h4>Web Programming</h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsam voluptates beatae autem odio earum.</p>
-                    </div>
-                    <div class="col-12 col-sm">
-                        <span class="icon design bg-success">
-                            <i class="fa fa-pencil"></i>
-                        </span>
-                        <h4>Web Design</h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsam voluptates beatae autem odio earum.</p>
-                    </div>
-                    <div class="col-12 col-sm">
-                        <span class="icon bg-success">
-                            <i class="fa fa-code"></i>
-                        </span>
-                        <h4>Web Programming</h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsam voluptates beatae autem odio earum.</p>
-                    </div>
-                    <div class="col-12 col-sm">
-                        <span class="icon bg-success">
-                            <i class="fa fa-binoculars"></i>
-                        </span>
-                        <h4>Web Programming</h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsam voluptates beatae autem odio earum.</p>
+                        <div class="col-12 col-sm">
+                            <span class="icon bg-success">
+                                <i class="fa fa-server"></i>
+                            </span>
+                            <h4>Domain & Web Hosting configuration</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsam voluptates beatae autem odio earum.</p>
+                        </div>
+                        <div class="col-12 col-sm">
+                            <span class="icon bg-success">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                            <h4>Email Accounts Setup</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsam voluptates beatae autem odio earum.</p>
+                        </div>
+                        <div class="col-12 col-sm">
+                            <span class="icon design bg-success">
+                                <i class="fa fa-pencil"></i>
+                            </span>
+                            <h4>Web Design</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsam voluptates beatae autem odio earum.</p>
+                        </div>
+                        <div class="col-12 col-sm">
+                            <span class="icon bg-success">
+                                <i class="fa fa-laptop"></i>
+                            </span>
+                            <h4>Web Programming</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsam voluptates beatae autem odio earum.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </section>
+            </section>
 
-        <!-- CONTACT -->
-        <section id="contact" class="p-5 bg-info">
-            <div class="title text-center mb-4">
-                <h3 class="text-white">Contact Me</h3>
-                <span></span>
-            </div>
-            <div class="row mt-3 col-12 col-sm-10 mx-auto">
-                <div class="col-6 col-sm">
-                    <a href="mailto:a.john.muiruri@gmail.com" target="_blank">
-                        <span><i class="fa fa-envelope"></i></span> a.john.muiruri@gmail.com</a>
+
+            <section id="process" class="p-3 p-sm-5 bg-white">
+                <div class="container-fluid px-0 px-sm-5">
+                    <div class="w-100 row m-0 pb-4 pb-sm-1">
+                        <div class="col-12 col-sm m-auto px-1">
+                            <h3 class="text-center">Why work with me?</h3>
+                            <ul class="work-list mt-2">
+                                <li>Quality work</li>
+                                <li>Project Trasparency</li>
+                                <li>Effective communication and project liasion</li>
+                                <li>Delivery on time</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm mb-3 m-auto">
+                            <h6 class="text-center my-3">The Process</h6>
+                            <div class="process-container mx-auto">
+                                <div class="deg-0 p-1">
+                                    <img src="images/laptop.jpg" alt="">
+                                    <span class="stage">4. Deploy</span>
+                                </div>
+
+                                <!-- <span class="deg-10"><i class="fa fa-arrow-down"></i></span> -->
+
+                                <div class="deg-72 p-1">
+                                    <img src="images/laptop.jpg" alt="">
+                                    <span class="stage"><span>5.</span> Deliver</span>
+                                </div>
+
+                                <div class="deg-144 p-1">
+                                    <img src="images/laptop.jpg" alt="">
+                                    <span class="stage"><span>1.</span> Define</span>
+                                </div>
+
+                                <!-- <span class="deg-170"><i class="fa fa-arrow-down"></i></span> -->
+                                <div class="deg-216 p-1">
+                                    <img src="images/laptop.jpg" alt="">
+                                    <span class="stage"><span>2.</span> Design</span>
+                                </div>
+                                <div class="deg-288 p-1">
+                                    <img src="images/laptop.jpg" alt="">
+                                    <span class="stage"><span>3.</span> Develop</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <!-- <div class="col-6 col-sm">
+
+            </section>
+
+
+            <!-- CONTACT -->
+            <section id="contact" class="p-2 p-sm-5 bg-info">
+                <div class="title text-center mb-4">
+                    <h3 class="text-white">Contact Me</h3>
+                    <span></span>
+                </div>
+                <div class="row mt-3 col-12 col-sm-10 col-lg-9s mx-auto mb-2 mb-sm-0">
+                    <div class="col contact-element">
+                        <a href="mailto:a.john.muiruri@gmail.com" target="_blank">
+                            <span class="contact-icon"><i class="fa fa-envelope"></i></span> <span class="text">a.john.muiruri@gmail.com</span></a>
+                    </div>
+                    <!-- <div class="col-6 col-sm">
                     <a href="tel:+254723023469" target="_blank">
                         <span><i class="fa fa-phone"></i></span>
                         +254723023469</a>
                 </div> -->
-                <div class="col-6 col-sm">
-                    <a href="https://www.facebook.com/johnmurng" target="_blank">
-                        <span><i class="fa fa-facebook"></i></span> @johnmurng</a>
+                    <div class="col contact-element">
+                        <a href="https://www.facebook.com/johnmurng" target="_blank">
+                            <span class="contact-icon"><i class="fa fa-facebook"></i></span><span class="text"> @johnmurng</span></a>
+                    </div>
+                    <div class="col contact-element"> <a href="https://www.instagra.com/mr_joh.n" target="_blank">
+                            <span class="contact-icon"><i class="fa fa-instagram"></i></span> <span class="text">@mr_joh.n</span></a>
+                    </div>
+                    <div class="col contact-element"> <a href="https://www.twitter.com/johnmurng" target="_blank">
+                            <span class="contact-icon"><i class="fa fa-twitter"></i></span><span class="text"> @johnmurng</span></a>
+                    </div>
                 </div>
-                <div class="col-6 col-sm"> <a href="https://www.instagra.com/mr_joh.n" target="_blank">
-                        <span><i class="fa fa-instagram"></i></span> @mr_joh.n</a>
-                </div>
-                <div class="col-6 col-sm"> <a href="https://www.twitter.com/johnmurng" target="_blank">
-                        <span><i class="fa fa-twitter"></i></span> @johnmurng</a>
-                </div>
-            </div>
-        </section>
-
-        <footer class="bg-light p-4">
-            <div class="text-center">John Muiruri &copy; 2020</div>
-        </footer>
-    </main>
+            </section>
 
 
-    <button class="btn btn-sm btn-dark text-white rounded-circle shadow" style="display:none" id="go-to-top">
-        <i class="fa fa-arrow-up"></i>
-    </button>
-    <script src="js/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+            <footer class="bg-light p-4">
+                <div class="text-center">John Muiruri &copy; 2020</div>
+            </footer>
+        </main>
 
-    <!-- <script src="http://scripts.wottmakplus.com/js/bootstrap.min.js"></script> -->
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/main.js"></script>
 
-</body>
+        <button class="btn btn-sm btn-dark text-white rounded-circle shadow" style="display:none" id="go-to-top">
+            <i class="fa fa-arrow-up"></i>
+        </button>
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+        <!-- <script src="http://scripts.wottmakplus.com/js/bootstrap.min.js"></script> -->
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
 
 </html>
