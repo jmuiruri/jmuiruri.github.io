@@ -77,11 +77,32 @@ $(document).ready(function () {
         }
     );
 
+    $(".work-name div.btn").on("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const link = $(this).data("href");
+        window.open(link, "_blank");
+    });
+
     getPopupHtml = (index) => {
         return '<a href="http://wottmakplus.com" target="_blank" class="visit btn btn-danger">Visit</a>';
         // let html = [];
         // return html[index];
     }
+
+    $(".owl-carousel").owlCarousel({
+        items: 3,
+        nav: false,
+        loop: true,
+        dots: true,
+        // center:true,
+        responsive: {
+            0: { items: 1 },
+            475: { items: 2 },
+            992: { items: 3 }
+        }
+    });
+
 
     // image: {
     //     markup: '<div class="mfp-figure">' +
