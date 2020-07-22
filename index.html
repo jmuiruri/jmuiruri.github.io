@@ -1,449 +1,492 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>John Muiruri</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="css/magnific-popup.css">
-        <link rel="stylesheet" href="css/styles.css">
+    <link rel="apple-touch-icon" sizes="180*180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32*32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16*16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
 
-    </head>
+    <title>John Muiruri | Web & Mobile Developer</title>
+    
+    <meta name="description" content="John Muiruri a web and mobile fullstack developer with a passion in both backend and frontend development and design">
 
-    <body class="position-relative" data-spy="scroll" data-target="#mainnav" data-offset="0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
 
-        <div id="loading">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/styles.css">
 
-            <style>
-                #loading {
-                    position: fixed;
-                    top: 0;
-                    bottom: 0;
-                    z-index: 2000;
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    background: #fff;
-                }
+</head>
 
-                #loading .loader {
-                    text-align: center;
-                    margin: auto;
-                }
+<body class="position-relative" data-spy="scroll" data-target="#mainnav" data-offset="0">
 
-                p span::before {
-                    animation: dots 2s linear infinite;
-                    content: '';
-                    font-size: 20px;
-                    color: green;
-                }
+    <div id="loading">
 
-                @keyframes dots {
+    <style>
+        #loading {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            z-index: 2000;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            background: #fff;
+        }
 
-                    0%,
-                    20% {
-                        content: '.'
-                    }
+        #loading .loader {
+            text-align: center;
+            margin: auto;
+        }
 
-                    40% {
-                        content: '..'
-                    }
+        #loading .loader img{
+            width: 70px;
+            height: 70px;
+        }
 
-                    60% {
-                        content: '...'
-                    }
+        p span::before {
+            animation: dots 2s linear 1;
+            content: '90%';
+            font-size:20px;
+            color:green;
+        }
 
-                    90%,
-                    100% {
-                        content: ""
-                    }
-                }
-            </style>
+        @keyframes dots {
+            0%,
+            20% {
+                content: '5%'
+            }
+
+            25%{
+                content: "25%"
+            }
+            40% {
+                content: '40%'
+            }
+
+            50% {
+                content: '50%'
+            }
+
+            90%,
+            100% {
+                content: "90%"
+            }
+        }
+    </style>
 
 
-            <script>
-                window.onload = () => setTimeout(() => document.getElementById("loading").remove(), 10);
-            </script>
+    <script>
+        window.onload = () => setTimeout(() => document.getElementById("loading").remove(), 10);
+    </script>
 
-            <div class="loader">
-                <img src="images/logo.png" alt="John Muiruri">
-                <p>Loading <span></span></p>
+    <div class="loader">
+        <img src="images/logo.png" alt="John Muiruri">
+        <p>Loading <span></span></p>
+    </div>
+</div>
+    <header id="mainnav" class="w-100 bg-d-dark fixed-top">
+        <nav class="navbar navbar-expand-md navbar-dark border-bdottom">
+            <div class="brand ml-3 bg-dansger">
+                <img src="images/logo.png" alt="" id="brand-image">
+                <span class="text-white">JOHN MUIRURI</span>
             </div>
-        </div>
-        <header id="mainnav" class="w-100 bg-d fixed-top">
-            <nav class="navbar navbar-expand-md navbar-dark bg-d ">
-                <div class="navbar-brand ml-3">John Muiruri</div>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#mainnav">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#skills">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#experience">Experience</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#work">Work</a>
-                        </li>
-                        <li class="nav-item my-auto">
-                            <a class="nav-link btn btn-danger text-white rounded-pill py-2 px-3" href="#contact">Hire Me</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto text-white">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work">Work</a>
+                    </li>
 
-        <main>
-            <section class="top" id="top">
-                <div class="bg-overlay">
-                    <h2>Hi I'm John Muiruri</h2>
-                    <button class="btn btn-lg btn-danger rounded-pill px-3">Hire Me</button>
-                    <!-- <span>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item my-auto">
+                        <a class="nav-link btn btn-danger text-white rounded-pill py-1 px-3 mt-2 mt-md-0" href="mailto:a.john.muiruri@gmail.com?Subject=Project Development Hire">Hire Me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="top" id="home">
+            <div class="bg-overlay">
+                <h2>HI I'M JOHN</h2>
+                <p>Web & Mobile Fullstack developer</p>
+                <a class="btn btn-lg btn-danger rounded-pill px-4 py-2" href="mailto:a.john.muiruri@gmail.com?Subject=Project Development Hire">Hire Me</a>
+                <!-- <span>
                     <i class="fa fa-arrow-down"></i>
                 </span> -->
+            </div>
+        </section>
+
+        <section id="about" class="px-2 py-3 bg-white animated slideInUp">
+            <h2 class="text-center my-2">About Me</h2>
+            <hr class="separator">
+            <div class="row col-12 col-sm-8 col-md-6 mx-auto">
+                <img src="images/coding languages.jpg" class="mx-auto rounded-circle" id="profile-img" alt="">
+
+                <div class="w-100 py-3">
+                    <p class="text-center">My name is John Muiruri, a fullstack developer with a passion in both backend and frontend development and design.I am currently a third year student in <b>Masinde Muliro University of Science and Technology</b> , pursuing a degree in <b>Computer Science</b>. I aspire towards a career fullstack development career to make software products geered towards making business more efficient and life easier.
+                    </p>
+
+                    <p class="text-center mt-1">When am not developing , I like drawing and watching movies.</p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="about" class="px-2 py-3 bg-white">
-                <h2 class="text-center my-2">About Me</h2>
-                <div class="row col-12 col-sm-8 col-md-6 mx-auto">
-                    <img src="images/coding languages.jpg" class="mx-auto rounded-circle" id="profile-img" alt="">
+        <section id="skills" class="p-2 p-md-5 bg-d">
+            <div class="text-center">
+                <h2 class="my-3">My Skills</h2>
+                <hr class="separator">
+            </div>
+            <div class="container-fluid p-1 p-sm-2">
+                <div class="row col-12 col-md-10 mx-auto text-center">
+                    <div class="col-12 col-sm">
+                        <span class="icon shadow skill-default">
+                            <i class="fa fa-laptop"></i>
+                        </span>
+                        <h4 class="mt-4 mb-3">Web Development</h4>
 
-                    <div class="w-100 py-3">
-                        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius itaque, quo repellat reiciendis dolore, nostrum explicabo magnam tempora unde, nulla consequuntur suscipit! Ducimus, eos quidem laborum labore obcaecati excepturi eum.</p>
+                        <div class="row col-12 col-sm-10 mx-auto mb-5 mb-md-0">
+                            <div class="skill">Html 5</div>
+                            <div class="skill">CSS 3</div>
+                            <div class="skill skill-alt">PHP</div>
+
+                            <div class="w-100 my-1 my-sm-2"></div>
+                            <div class="skill skill-alt">MySQL</div>
+
+                            <div class="skill">ES6 Javascript</div>
+                            <div class="skill mt-2 mt-sm-0">React</div>
+                            <div class="w-100 my-2 d-none d-sm-block"></div>
+                            <div class="skill mt-2 mt-sm-0 skill-alt">Bootstrap</div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm mt-5 mt-sm-auto mb-auto">
+                        <span class="icon android shadow skill-alts">
+                            <i class="fa fa-mobile"></i>
+                        </span>
+                        <h4 class="mt-4 mb-0">Android Development</h4>
+                        <div class="row col-12 col-sm-6 mx-auto p-3 p-sm-auto">
+                            <div class="skill">Java</span></div>
+                            <div class="skill skill-alt">Android</span></div>
+                        </div>
                     </div>
                 </div>
-            </section>
+        </section>
 
-            <!-- <section id="experience" class="p-5 bg-success">
-            <h2 class="text-center mb-3">Experience</h2>
-            <div class="row col-12 col-sm-10 mx-auto">
-                <div class="col-12 col-sm my-auto">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nam adipisci eius fugit quibusdam! Facere dicta deserunt error dolorum, qui nam ex quibusdam iste, placeat animi optio dolor dolore aperiam aut assumenda vel modi amet! Facilis fuga qui quos consectetur?</p>
+        <section id="experience" class="p-2 p-sm-5 bg-light">
+            <h2 class="text-center my-3">Experience</h2>
+            <hr class="separator">
+            <div class="row col-12 col-md-11 mx-auto">
+                <div class="col-12 col-sm m-auto">
+                    <img src="images/svg/experience.svg" alt="">
                 </div>
+                <div class="col-12 col-sm-8 col-md my-2 my-sm-1">
+                    <p>Having been in the industry as a developer for 3 years i have come to learn alot and worked with various technologies including : </p>
 
-                <div class="col-12 col-sm">
-                    <div class="row">
-                    <img src="images/coding languages.jpg" class="m-auto rounded-circle" id="profile-img" alt="">
+                    <ul class="row">
+                        <div class="col">
+                            <li>Html 5</li>
+                            <li>CSS3</li>
+                            <li>Bootstrap</li>
+                            <li>Javascript</li>
+                            <li>Angular</li>
+                            <li>React</li>
+                        </div>
+                        <div class="col">
+                            <li>Firebase</li>
+                            <li>PHP</li>
+                            <li>Laravel</li>
+                            <li>MySQL</li>
+                            <li>Java</li>
+                            <li>Android</li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="w-100 p-1 bg-light"></div>
+
+
+        <section id="work" class="p-2 p-sm-5 bg-white">
+            <h2 class="text-center my-3">What I've done</h2>
+            <hr class="separator">
+            <div class="container-fluid">
+                <div class="w-100 row m-0">
+                    <a href="images/projects/wottmakplus.png" class="col-12 col-sm">
+                    <img src="images/projects/wottmakplus.png" alt="">
+                    <div class="work-name">Wottmak Plus
+                        <div data-href="http://wottmakplus.com/web/guide.html" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
+                    </div>
+                </a><a href="images/projects/dimewise.png" class="col-12 col-sm">
+                    <img src="images/projects/dimewise.png" alt="">
+                    <div class="work-name">Dime Wise
+                        <div data-href="http://localhost/www/freelance/dimewise_OLD" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
+                    </div>
+                </a><a href="images/projects/vendor.png" class="col-12 col-sm">
+                    <img src="images/projects/vendor.png" alt="">
+                    <div class="work-name">Wottmak Vendor Console
+                        <div data-href="http://shop.localhost/vendor/" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
+                    </div>
+                </a><div class="w-100 my-sm-1 p-sm-1"></div><a href="images/projects/new_dimewise.png" class="col-12 col-sm">
+                    <img src="images/projects/new_dimewise.png" alt="">
+                    <div class="work-name">Dime Wise
+                        <div data-href="http://localhost/www/freelance/dimewise" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
+                    </div>
+                </a><a href="images/projects/publish.png" class="col-12 col-sm">
+                    <img src="images/projects/publish.png" alt="">
+                    <div class="work-name">Wottmak Publish Shop
+                        <div data-href="http://shop.localhost/publish/" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
+                    </div>
+                </a><a href="images/projects/console.png" class="col-12 col-sm">
+                    <img src="images/projects/console.png" alt="">
+                    <div class="work-name">Wottmak Angular Console
+                        <div data-href="http://console.wottmakplus.com" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
+                    </div>
+                </a>                </div>
+            </div>
+
+        </section>
+
+
+        <section id="testimonials" class="bg-light bg-whites p-1 p-sm-5">
+
+    <div class="text-center title pb-3">
+        <h3>Clients Feedback</h3>
+        <hr class="separator">
+    </div>
+
+    <div class="owl-carousel owl-theme text-center mx-1 mx-sm-3">
+
+        <div class="card shadow-sm p-2 mx-2 my-auto">
+                            <div class="row no-gutters">
+                                <div class="col-12 col-sm my-auto">
+                                    <img src="images/svg/ceo.svg" alt="">
+                                </div>
+                                <div class="col-12 col-md-9 mt-2 mt-md-0 px-1">
+                                    <div class="t-content">
+                                        <h4>Joshua C Njoroge</h4>
+                                        <h6>Co-CEO, Wottmak Plus</h6>
+                                        <div class="card-text px-3 pt-1">His dedication to building enabled us to kickoff our business with a good working system. The work was completed on time without hitches.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="card shadow-sm p-2 mx-2 my-auto">
+                            <div class="row no-gutters">
+                                <div class="col-12 col-sm my-auto">
+                                    <img src="images/svg/ceo.svg" alt="">
+                                </div>
+                                <div class="col-12 col-md-9 mt-2 mt-md-0 px-1">
+                                    <div class="t-content">
+                                        <h4>James Kimani</h4>
+                                        <h6>CEO, Dime Wise Investments</h6>
+                                        <div class="card-text px-3 pt-1">Our company has seen a 30% growth in our client base from the good work on our website from him. Working with him was smooth and produced the end product we needed.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="card shadow-sm p-2 mx-2 my-auto">
+                            <div class="row no-gutters">
+                                <div class="col-12 col-sm my-auto">
+                                    <img src="images/svg/ceo.svg" alt="">
+                                </div>
+                                <div class="col-12 col-md-9 mt-2 mt-md-0 px-1">
+                                    <div class="t-content">
+                                        <h4>James Kimani</h4>
+                                        <h6>CEO, Dime Wise Investments</h6>
+                                        <div class="card-text px-3 pt-1">Our company has seen a 30% growth in our client base from the good work on our website from him. Working with him was smooth and produced the end product we needed.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    </div>
+
+</section>
+
+        <section id="services" class="p-2 p-sm-5 bg-d">
+            <h2 class="text-center mb-4">My Services</h2>
+            <hr class="separator">
+            <div class="container-fluid p-3">
+                <div class="row m-0 w-100 text-center">
+
+                    <div class="col-12 col-sm">
+                        <span class="icon bg-d-light">
+                            <i class="fa fa-server"></i>
+                        </span>
+                        <h4>Domain & Web Hosting configuration</h4>
+                        <p class="card-text">Facilitate in the process of acquiring the desired domain and hosting package for the needs of the website.</p>
+                    </div>
+                    <div class="col-12 col-sm">
+                        <span class="icon bg-d-light">
+                            <i class="fa fa-envelope-o"></i>
+                        </span>
+                        <h4>Email Accounts Setup</h4>
+                        <p class="card-text">Create and configure email accounts as required by the client.</p>
+                    </div>
+
+                    <div class="w-100 my-3 my-md-0 d-none d-sm-block d-md-none"></div>
+
+                    <div class="col-12 col-sm">
+                        <span class="icon design bg-d-light">
+                            <i class="fa fa-pencil"></i>
+                        </span>
+                        <h4>UI / UX Design</h4>
+                        <p class="card-text">Design user interaces geered toward a good experience for the target users.</p>
+                    </div>
+                    <div class="col-12 col-sm">
+                        <span class="icon bg-d-light">
+                            <i class="fa fa-laptop"></i>
+                        </span>
+                        <h4>Web & Android <br> Programming</h4>
+                        <p class="card-text">Bring about a tangible product from the designs made in a simple and efficient manner.</p>
                     </div>
                 </div>
             </div>
-        </section> -->
 
-            <section id="skills" class="p-2 p-sm-5 bg-light">
-                <div class="text-center">
-                    <h2 class="my-3">My Skills</h2>
-                </div>
-                <div class="container-fluid p-1 p-sm-2">
-                    <div class="row col-12 col-sm-8 mx-auto text-center">
-                        <div class="col-12 col-sm">
-                            <span class="icon shadow">
-                                <i class="fa fa-laptop"></i>
-                            </span>
-                            <h4 class="my-3">Web Development</h4>
+        </section>
 
-                            <div class="row col-12 col-sm-10 mx-auto">
-                                <div class="skill">Html 5</div>
-                                <div class="skill">CSS 3</div>
-                                <div class="skill">PHP</div>
 
-                                <div class="w-100 my-3"></div>
-                                <div class="skill">MySQL</div>
 
-                                <div class="skill">ES6 Javascript</div>
-                                <div class="skill">React</div>
-
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm mt-5 mt-sm-auto mb-auto">
-                            <span class="icon android shadow">
-                                <i class="fa fa-mobile"></i>
-                            </span>
-                            <h4 class="mt-4">Android Development</h4>
-                            <div class="row col-12 col-sm-6 mx-auto p-3 p-sm-auto">
-                                <div class="skill">Java</span></div>
-                                <div class="skill">Android</span></div>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-
-            <section id="experience" class="p-2 p-sm-5 bg-success text-white">
-                <h2 class="text-center mb-3">Experience</h2>
-                <div class="row col-12 col-md-11 mx-auto">
-                    <div class="col-12 col-sm m-auto">
-                        <img src="svg/innovation_.svg" alt="">
-                    </div>
-                    <div class="col-12 col-sm-8 col-md my-2 my-sm-1">
-                        <p>Having been in the industry as a developer for 3 years i have come to learn alot and worked with various technologies including : </p>
-
-                        <ul class="row">
-                            <div class="col">
-                                <li>Html 5</li>
-                                <li>CSS3</li>
-                                <li>Javascript</li>
-                                <li>Angular</li>
-                                <li>React</li>
-                                <li>Firebase</li>
-                            </div>
-                            <div class="col">
-                                <li>PHP</li>
-                                <li>Laravel</li>
-                                <li>MySQL</li>
-                                <li>Java</li>
-                                <li>Android</li>
-                            </div>
+        <section id="process" class="p-3 p-lg-5 bg-white">
+            <div class="container-fluid px-0 px-md-2 px-lg-3">
+                <div class="w-100 row m-0 pb-4 pb-sm-1">
+                    <div class="col-12 col-sm m-auto px-1">
+                        <h3 class="text-center">Why work with me?</h3>
+                        <ul class="work-list mt-2">
+                            <li>Quality work</li>
+                            <li>Project Trasparency</li>
+                            <li>Effective communication and project liasion</li>
+                            <li>Project delivery on time</li>
+                            <li>Work done to client's satisfaction</li>
                         </ul>
                     </div>
-                </div>
-            </section>
-
-            <div class="w-100 p-1 bg-light"></div>
-
-
-            <section id="work" class="p-2 p-sm-5 bg-white">
-                <h2 class="text-center my-3">What I've done</h2>
-
-                <div class="container-fluid">
-                    <div class="w-100 row m-0">
-                        <a href="images/projects/wottmakplus.png" class="col-12 col-sm">
-                            <img src="images/projects/wottmakplus.png" alt="">
-                            <div class="work-name">Wottmak Plus
-                                <div data-href="http://wottmakplus.com/web/guide.html" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
+                    <div class="col-12 col-md-8 mb-3 m-auto p-0 p-sm-2">
+                        <h6 class="text-center my-1">The Process</h6>
+                        <div id="process-block" class="stage-container">
+                            <div class="stage-anchor w-100 my-auto">
+                                <span></span>
                             </div>
-                        </a><a href="images/projects/dimewise.png" class="col-12 col-sm">
-                            <img src="images/projects/dimewise.png" alt="">
-                            <div class="work-name">Dime Wise
-                                <div data-href="http://localhost/www/freelance/dimewise_OLD" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
-                            </div>
-                        </a><a href="images/projects/vendor.png" class="col-12 col-sm">
-                            <img src="images/projects/vendor.png" alt="">
-                            <div class="work-name">Wottmak Vendor Console
-                                <div data-href="http://shop.localhost/vendor/" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
-                            </div>
-                        </a><a href="images/projects/new_dimewise.png" class="col-12 col-sm">
-                            <img src="images/projects/new_dimewise.png" alt="">
-                            <div class="work-name">Dime Wise
-                                <div data-href="http://localhost/www/freelance/dimewise" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
-                            </div>
-                        </a>
-                        <div class="w-100 my-sm-1 p-sm-1"></div><a href="images/projects/shop.png" class="col-12 col-sm">
-                            <img src="images/projects/shop.png" alt="">
-                            <div class="work-name">Wottmak Shop
-                                <div data-href="http://wottmakplus.com" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
-                            </div>
-                        </a><a href="images/projects/publish.png" class="col-12 col-sm">
-                            <img src="images/projects/publish.png" alt="">
-                            <div class="work-name">Wottmak Publish Shop
-                                <div data-href="http://shop.localhost/publish/" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
-                            </div>
-                        </a><a href="images/projects/console.png" class="col-12 col-sm">
-                            <img src="images/projects/console.png" alt="">
-                            <div class="work-name">Wottmak Angular Console
-                                <div data-href="http://console.wottmakplus.com" class="btn btn-success ml-1"> <i class="fa fa-external-link"></i></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
 
-            </section>
-
-
-            <section id="testimonials" class="bg-lightd bg-white p-1 p-sm-5">
-
-                <div class="text-center title pb-3">
-                    <h3>Clients Feedback</h3>
-                    <span class="bg-dw-alt"></span>
-                </div>
-
-                <div class="owl-carousel owl-theme text-center mx-1 mx-sm-3">
-
-                    <div class="card shadow-sm p-2 mx-2 my-auto">
-                        <div class="row no-gutters">
-                            <div class="col-12 col-sm my-auto">
-                                <img src="images/testimonials/laptop.jpg" alt="">
-                            </div>
-                            <div class="col-12 col-lg-8 mt-2 mt-md-0">
-                                <div class="t-content">
-                                    <h4>Joshua C Njoroge</h4>
-                                    <h6>Co-CEO, Wottmak Plus</h6>
-                                    <div class="card-text px-3 pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus asperiores laborum quia cum molestias pariatur </div>
+                            <div class="row w-100 m-0 p-1 py-sm-3">
+                                <div class="col stage-1">
+                                    <div class="stage">
+                                        <img src="images/svg/checklist.svg" alt="">
+                                        <span>1. Define</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card shadow-sm p-2 mx-2 my-auto">
-                        <div class="row no-gutters">
-                            <div class="col-12 col-sm my-auto">
-                                <img src="images/testimonials/laptop.jpg" alt="">
-                            </div>
-                            <div class="col-12 col-lg-8 mt-2 mt-md-0">
-                                <div class="t-content">
-                                    <h4>James Kimani</h4>
-                                    <h6>CEO, Dime Wise Investments Limited</h6>
-                                    <div class="card-text px-3 pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus asperiores laborum quia cum molestias pariatur </div>
+                                <div class="col stage-2">
+                                    <div class="stage shadow">
+                                        <img src="images/svg/design.svg" alt="">
+                                        <span>2. Design</span>
+                                    </div>
+                                </div>
+
+                                <div class="col stage-3">
+                                    <div class="stage">
+                                        <img src="images/svg/coding.svg" alt="">
+                                        <span>3. Develop</span>
+                                    </div>
+                                </div>
+
+                                <div class="w-100 my-2 d-lg-none"></div>
+
+                                <div class="col stage-4">
+                                    <div class="stage">
+                                        <img src="images/svg/launch.svg" alt="">
+                                        <span>4. Deploy</span>
+                                    </div>
+                                </div>
+
+                                <div class="col stage-5">
+                                    <div class="stage">
+                                        <img src="images/svg/deliver.svg" alt="">
+                                        <span>5. Deliver</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-            </section>
+        </section>
 
-            <section id="services" class="p-2 p-sm-5 bg-light">
-                <h2 class="text-center mb-4">My Services</h2>
+        <section id="contact" class="p-2 p-sm-5 bg-d-alt">
 
-                <div class="container-fluid p-3">
-                    <div class="row m-0 w-100 text-center">
-
-                        <div class="col-12 col-sm">
-                            <span class="icon bg-success">
-                                <i class="fa fa-server"></i>
-                            </span>
-                            <h4>Domain & Web Hosting configuration</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsam voluptates beatae autem odio earum.</p>
-                        </div>
-                        <div class="col-12 col-sm">
-                            <span class="icon bg-success">
-                                <i class="fa fa-envelope-o"></i>
-                            </span>
-                            <h4>Email Accounts Setup</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsam voluptates beatae autem odio earum.</p>
-                        </div>
-                        <div class="col-12 col-sm">
-                            <span class="icon design bg-success">
-                                <i class="fa fa-pencil"></i>
-                            </span>
-                            <h4>Web Design</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsam voluptates beatae autem odio earum.</p>
-                        </div>
-                        <div class="col-12 col-sm">
-                            <span class="icon bg-success">
-                                <i class="fa fa-laptop"></i>
-                            </span>
-                            <h4>Web Programming</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsam voluptates beatae autem odio earum.</p>
-                        </div>
+            <div class="row col-12 col-sm-10 col-md-9s p-0 mx-auto">
+                <div class="col py-3">
+                    <div class="text-center">
+                        <h5>Useful Links</h5>
                     </div>
+
+                    <div class="row w-100 m-0 p-2" id="usefullinks">
+                        <a href="#about" class="col col-md-4">About</a>
+                        <a href="#skills" class="col col-md-4">Skill</a>
+                        <a href="#experience" class="col col-md-4">Experience</a>
+                        <a href="#work" class="col col-md-4">Work</a>
+                        <a href="#services" class="col col-md-4">Services</a>
+                    </div>
+
                 </div>
 
-            </section>
-
-
-            <section id="process" class="p-3 p-sm-5 bg-white">
-                <div class="container-fluid px-0 px-sm-5">
-                    <div class="w-100 row m-0 pb-4 pb-sm-1">
-                        <div class="col-12 col-sm m-auto px-1">
-                            <h3 class="text-center">Why work with me?</h3>
-                            <ul class="work-list mt-2">
-                                <li>Quality work</li>
-                                <li>Project Trasparency</li>
-                                <li>Effective communication and project liasion</li>
-                                <li>Delivery on time</li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-sm mb-3 m-auto">
-                            <h6 class="text-center my-3">The Process</h6>
-                            <div class="process-container mx-auto">
-                                <div class="deg-0 p-1">
-                                    <img src="images/laptop.jpg" alt="">
-                                    <span class="stage">4. Deploy</span>
-                                </div>
-
-                                <!-- <span class="deg-10"><i class="fa fa-arrow-down"></i></span> -->
-
-                                <div class="deg-72 p-1">
-                                    <img src="images/laptop.jpg" alt="">
-                                    <span class="stage"><span>5.</span> Deliver</span>
-                                </div>
-
-                                <div class="deg-144 p-1">
-                                    <img src="images/laptop.jpg" alt="">
-                                    <span class="stage"><span>1.</span> Define</span>
-                                </div>
-
-                                <!-- <span class="deg-170"><i class="fa fa-arrow-down"></i></span> -->
-                                <div class="deg-216 p-1">
-                                    <img src="images/laptop.jpg" alt="">
-                                    <span class="stage"><span>2.</span> Design</span>
-                                </div>
-                                <div class="deg-288 p-1">
-                                    <img src="images/laptop.jpg" alt="">
-                                    <span class="stage"><span>3.</span> Develop</span>
-                                </div>
-                            </div>
-                        </div>
-
+                <div class="col py-3">
+                    <div class="text-center">
+                        <h5>Contact</h5>
                     </div>
+
+                    <div class="row w-100 bg-danfger text-center social-media">
+                        <a class="col-6 col-sm-auto col-md-d12" href="https://www.facebook.com/johnmurng" target="_blank"><span><i class="fa fa-facebook"></i></span></a>
+                        <a class="col-6 col-sm-auto col-smd-12" href="https://www.instagra.com/mr_joh.n" target="_blank"><span><i class="fa fa-instagram"></i></span></a>
+                        <a class="col-6 col-sm-auto col-sm-12d" href="https://www.twitter.com/johnmurng" target="_blank"><span><i class="fa fa-twitter-square"></i></span></a>
+                        <a class="col-6 col-sm-auto col-sm-12d" href="mailto:a.john.muiruri@gmail.com" target="_blank"><span><i class="fa fa-envelope-o"></i></span></a>
+                    </div>
+
                 </div>
 
-            </section>
+            </div>
+        </section>
+
+        <div class="w-100 py-4 bg-white">
+            <div class="text-center">John Muiruri &copy; 2020</div>
+        </div>
+
+    </main>
 
 
-            <!-- CONTACT -->
-            <section id="contact" class="p-2 p-sm-5 bg-info">
-                <div class="title text-center mb-4">
-                    <h3 class="text-white">Contact Me</h3>
-                    <span></span>
-                </div>
-                <div class="row mt-3 col-12 col-sm-10 col-lg-9s mx-auto mb-2 mb-sm-0">
-                    <div class="col contact-element">
-                        <a href="mailto:a.john.muiruri@gmail.com" target="_blank">
-                            <span class="contact-icon"><i class="fa fa-envelope"></i></span> <span class="text">a.john.muiruri@gmail.com</span></a>
-                    </div>
-                    <!-- <div class="col-6 col-sm">
-                    <a href="tel:+254723023469" target="_blank">
-                        <span><i class="fa fa-phone"></i></span>
-                        +254723023469</a>
-                </div> -->
-                    <div class="col contact-element">
-                        <a href="https://www.facebook.com/johnmurng" target="_blank">
-                            <span class="contact-icon"><i class="fa fa-facebook"></i></span><span class="text"> @johnmurng</span></a>
-                    </div>
-                    <div class="col contact-element"> <a href="https://www.instagram.com/mr_joh.n" target="_blank">
-                            <span class="contact-icon"><i class="fa fa-instagram"></i></span> <span class="text">@mr_joh.n</span></a>
-                    </div>
-                    <div class="col contact-element"> <a href="https://www.twitter.com/johnmurng" target="_blank">
-                            <span class="contact-icon"><i class="fa fa-twitter"></i></span><span class="text"> @johnmurng</span></a>
-                    </div>
-                </div>
-            </section>
+    <button class="btn btn-sm bg-d-dark text-white rounded-circle shadow" style="display:none" id="go-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </button>
 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/main.js"></script>
 
-            <footer class="bg-light p-4">
-                <div class="text-center">John Muiruri &copy; 2020</div>
-            </footer>
-        </main>
-
-
-        <button class="btn btn-sm btn-dark text-white rounded-circle shadow" style="display:none" id="go-to-top">
-            <i class="fa fa-arrow-up"></i>
-        </button>
-
-
-        <script src="js/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
-
-        <!-- <script src="http://scripts.wottmakplus.com/js/bootstrap.min.js"></script> -->
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/main.js"></script>
-
-    </body>
+</body>
 
 </html>
