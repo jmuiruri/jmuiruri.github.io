@@ -1,19 +1,59 @@
 $(document).ready(function () {
 
-    $("#navbar-toggler").on("click", function () {
-        $(".nav-items").toggleClass("show");
-    });
+    const $window = $(window), $winWidth = $window.width(), $winHeight = $window.height();
+    const halfHeight = $winHeight / 2, quarterHeight = $winHeight / 4;
 
+    isElementInViewPort = ($el) => {
+        let $rect = $el[0].getBoundingClientRect();
+        return ($rect.top >= 0 && $rect.left >= 0 && $rect.bottom <= $winHeight && $rect.right <= $winWidth);
+    }
+
+    let isAnimated = false;
+    let $process = $("#process-block");
+
+    let animatedSections = [];
+
+    animateProcess = ($element) => {
+        $element.find(".row>div:not(.w-100)").each((i, e) => {
+            let x = i + 1;
+            let anim = x > 1 ? "fadeInLeft" : "bounce";
+            const classList = "col stage-" + x + " animated " + anim + " delay-" + i + "s";
+            $(e).attr("class", classList);
+        });
+
+        // animatedSections[$element.attr("id")] = true;
+        isAnimated = true;
+
+        // console.log(animatedSections);
+    }
+
+    let lastScrollPos = 0;
+    const $nav = $("nav"), BORDER_BOTTOM = "border-bottom";
 
     window.onscroll = () => {
         const scrollPos = window.top.scrollY;
 
-        if (scrollPos > (window.outerHeight / 2)) {
-            $goToTop.show();
+        if (scrollPos > quarterHeight) {
+            $nav.addClass(BORDER_BOTTOM);
+        } else {
+            $nav.removeClass(BORDER_BOTTOM);
+        }
+
+        if (scrollPos > halfHeight) {
+            if (lastScrollPos > scrollPos) {
+                $goToTop.show();
+            } else {
+                $goToTop.hide();
+            }
         } else {
             $goToTop.hide();
         }
 
+        lastScrollPos = scrollPos;
+
+        if (isElementInViewPort($process) && !isAnimated) {
+            animateProcess($process);
+        }
         // navHighlight(scrollPos);
 
     }
@@ -47,16 +87,16 @@ $(document).ready(function () {
 
     initNavLinksClick = () => {
         $("a.nav-link:not(.dropdown-toggle)").on("click", function () {
-            // if ($nav.hasClass(MENU_SHOWN))
-            $navToggle.click();
+            console.log("click toggler");
+            if ($winWidth < 768) $navToggle.click();
         });
     }
 
-    // initNavLinksClick();
+    initNavLinksClick();
 
     const $goToTop = $("#go-to-top");
     $goToTop.on("click", function () {
-        scroll("#mainnav");
+        scroll("#home");
     });
 
 
@@ -90,18 +130,22 @@ $(document).ready(function () {
         // return html[index];
     }
 
-    $(".owl-carousel").owlCarousel({
-        items: 3,
-        nav: false,
-        loop: true,
-        dots: true,
-        // center:true,
-        responsive: {
-            0: { items: 1 },
-            475: { items: 2 },
-            992: { items: 3 }
-        }
-    });
+    initCarousel = () => {
+        $(".owl-carousel").owlCarousel({
+            items: 3,
+            nav: false,
+            loop: true,
+            dots: true,
+            // center:true,
+            responsive: {
+                0: { items: 1 },
+                475: { items: 2 },
+                992: { items: 3 }
+            }
+        });
+    }
+
+    initCarousel();
 
 
     // image: {
@@ -116,6 +160,13 @@ $(document).ready(function () {
     //         verticalFit:true,
     //         tError:'<a> Image could not be loaded</a>'
     // }
+
+
+    // $(".nav-link").on("change")
+
+
+
+
 
 });
 
