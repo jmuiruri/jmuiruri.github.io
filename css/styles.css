@@ -212,12 +212,12 @@ hr.separator {
 #services .icon {
 	font-size: 2.2em;
 	border-radius: 50%;
-	/* background: #f4f4f4; */
 	padding: 0.4em 0.45em;
 	color: white;
 }
 
-#services .icon.design,#services .icon.seo {
+#services .icon.design,
+#services .icon.seo {
 	padding: 0.4em 0.55em;
 }
 
