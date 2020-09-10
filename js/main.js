@@ -1,17 +1,20 @@
 $(document).ready(function () {
 
     const $window = $(window), $winWidth = $window.width(), $winHeight = $window.height();
-    const halfHeight = $winHeight / 2, quarterHeight = $winHeight / 4;
+    getQH = () =>  $winHeight / ($(".top").hasClass(".tog-bg") ? 4 : 10);
+    const halfHeight = $winHeight / 2, quarterHeight = getQH();
 
     isElementInViewPort = ($el) => {
-        let $rect = $el[0].getBoundingClientRect();
+        let $element = $el[0];
+        if ($element == undefined) return false;
+        let $rect = $element.getBoundingClientRect();
         return ($rect.top >= 0 && $rect.left >= 0 && $rect.bottom <= $winHeight && $rect.right <= $winWidth);
     }
 
     let isAnimated = false;
     let $process = $("#process-block");
 
-    let animatedSections = [];
+    // let animatedSections = [];
 
     animateProcess = ($element) => {
         $element.find(".row>div:not(.w-100)").each((i, e) => {
@@ -24,7 +27,6 @@ $(document).ready(function () {
         // animatedSections[$element.attr("id")] = true;
         isAnimated = true;
 
-        // console.log(animatedSections);
     }
 
     let lastScrollPos = 0;
@@ -99,24 +101,6 @@ $(document).ready(function () {
         scroll("#home");
     });
 
-
-    $("#work").magnificPopup(
-        {
-            delegate: 'a',
-            type: 'image',
-            gallery: {
-                enabled: true
-            },
-            // callbacks: {
-            //     elementParse: function (item) {
-            //         item.el.context.title = getPopupHtml(item.index);
-            //         // console.log(item.index, item);
-            //     }
-            // },
-            closeBtnInside: false
-        }
-    );
-
     $(".work-name div.btn").on("click", function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -132,7 +116,6 @@ $(document).ready(function () {
 
     initCarousel = () => {
         $(".owl-carousel").owlCarousel({
-            items: 3,
             nav: false,
             loop: true,
             dots: true,
@@ -148,42 +131,34 @@ $(document).ready(function () {
     initCarousel();
 
 
-    // image: {
-    //     markup: '<div class="mfp-figure">' +
-    //         '<div class="mfp-close"></div>'+
-    //         '<div class="mfp-img></div>'+
-    //         '<div class="mfp-bottom-bar">'+
-    //         'div class="mfp-title"></div>'+
-    //         '<div class="mfp-title"></div>'+
-    //         '</div></div>',
-    //         titleSrc:'title',
-    //         verticalFit:true,
-    //         tError:'<a> Image could not be loaded</a>'
-    // }
+    
+    newFilter = () => {
+
+        $(".gallery").magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+                enabled: true
+            },
+            closeBtnInside: false
+
+        });
+
+        const $gallery = $('.gallery').isotope({});
+        $('.filtering').on("click", 'span', function () {
+            const $span = $(this);
+            $span.toggleClass("active").siblings().removeClass("active");
+            let filterVal = $span.data('filter');
+            $gallery.isotope({ filter: filterVal });
+        });
 
 
-    // $(".nav-link").on("change")
 
 
+    }
+
+    newFilter();
 
 
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
