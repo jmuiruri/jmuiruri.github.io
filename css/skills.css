@@ -1,0 +1,44 @@
+
+/* SKILLS
+----------------------------- */
+
+#skills .icon {
+	font-size: 3em;
+	border-radius: 50%;
+	background: #fff;
+	padding: 0.4em 0.5em;
+	color: #000;
+}
+
+#skills h2,#skills h4{
+	color: #fff;
+}
+
+#skills .icon.android {
+	padding: 0.4em 0.85em;
+}
+
+#skills .skill {
+	/* width: auto; */
+	border-radius:  25px;
+	/* background: rgb(243, 239, 1); */
+	/* border: 1px solid #000; */
+	/* color: rgb(0, 0, 0); */
+	padding: 1em 2em;
+	font-size: 70%;
+	font-weight: bold;
+	/* border: 1px solid #fff; */
+	margin: 0.3em auto;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.418);
+}
+
+#skills .skill-desfault {
+	/* background: rgb(243, 239, 1); */
+	color: rgb(0, 0, 0);
+}
+
+#skills .skill-alt {
+	/* background: rgb(243, 118, 1); */
+	/* background: rgb(170, 165, 164); */
+	color: #fff;
+}

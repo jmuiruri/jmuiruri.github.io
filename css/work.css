@@ -1,0 +1,111 @@
+#work .filtering .filter {
+	display: inline-block;
+	padding: 14px 15px;
+	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+	border-radius: 30px;
+}
+
+#work .filtering span {
+	display: inline-block;
+	margin: 0.1em 0.3em;
+	padding: 8px 12px;
+	font-size: 12px;
+	font-weight: bold;
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+#work .filtering span:not(.active):hover {
+	background: #1a227eab;
+	background: linear-gradient(
+		linear,
+		left top,
+		right top,
+		from(#1a227eab),
+		to(#2574fdab)
+	);
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.651), rgba(13, 81, 228, 0.719));
+	color: white;
+	/* transition: all .5s; */
+}
+
+#work .filtering .active {
+	background: #1a237e;
+	background: linear-gradient(
+		linear,
+		left top,
+		right top,
+		from(#000),
+		to(rgba(128, 0, 128, 0.685))
+	);
+	background: linear-gradient(to right,rgba(0, 0, 0, 0.883), rgb(13, 81, 228));
+	color: white;
+	transition: all 0.5s;
+}
+
+#work .item-img {
+	position: relative;
+	display: flex;
+	border: 2px solid #fff;
+	margin: .5em;
+	border: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+.gallery:not(.old) .item-img img {
+	max-width: 100%;
+}
+
+#work .item-img:hover .item-img-overlay {
+	visibility: visible;
+	opacity: 1;
+}
+
+#work .item-img-overlay {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	padding: 30px;
+	background: rgba(255, 255, 255, 0.95);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s;
+}
+
+#work .item-img-overlay .icon {
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 50%;
+	border: 1px solid #1a237e;
+	text-align: center;
+	font-size: 20px;
+	color: #1a237e;
+}
+
+#work a:not(.btn) {
+	padding: 0;
+	margin: auto 0;
+}
+
+
+#work .work-name {
+	position: absolute;
+	bottom: 0;
+	/* border:2px solid #000; */
+	background: #000000bd;
+	color: #fff;
+	width: 100%;
+	text-align: center;
+	margin: auto;
+	padding: 0.75em;
+	display: none;
+}
+
+#work .row > a:hover .work-name {
+	display: block;
+}
