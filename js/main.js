@@ -151,8 +151,8 @@ $(document).ready(function () {
             let filterVal = $span.data('filter');
             $gallery.isotope({ filter: filterVal });
         });
-
-
+        
+        $(".filtering span#all").click();
 
 
     }
