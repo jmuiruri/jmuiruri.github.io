@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     const $window = $(window), $winWidth = $window.width(), $winHeight = $window.height();
-    getQH = () =>  $winHeight / ($(".top").hasClass(".tog-bg") ? 4 : 10);
+    getQH = () => $winHeight / ($(".top").hasClass(".tog-bg") ? 4 : 10);
     const halfHeight = $winHeight / 2, quarterHeight = getQH();
 
     isElementInViewPort = ($el) => {
@@ -14,8 +14,6 @@ $(document).ready(function () {
     let isAnimated = false;
     let $process = $("#process-block");
 
-    // let animatedSections = [];
-
     animateProcess = ($element) => {
         $element.find(".row>div:not(.w-100)").each((i, e) => {
             let x = i + 1;
@@ -24,9 +22,7 @@ $(document).ready(function () {
             $(e).attr("class", classList);
         });
 
-        // animatedSections[$element.attr("id")] = true;
         isAnimated = true;
-
     }
 
     let lastScrollPos = 0;
@@ -52,6 +48,8 @@ $(document).ready(function () {
         }
 
         lastScrollPos = scrollPos;
+
+        if ($process === undefined) return;
 
         if (isElementInViewPort($process) && !isAnimated) {
             animateProcess($process);
@@ -89,7 +87,6 @@ $(document).ready(function () {
 
     initNavLinksClick = () => {
         $("a.nav-link:not(.dropdown-toggle)").on("click", function () {
-            console.log("click toggler");
             if ($winWidth < 768) $navToggle.click();
         });
     }
@@ -114,12 +111,12 @@ $(document).ready(function () {
         // return html[index];
     }
 
-    initCarousel = () => {
+    showCarousel = () => {
         $(".owl-carousel").owlCarousel({
             nav: false,
             loop: true,
             dots: true,
-            // center:true,
+            center: true,
             responsive: {
                 0: { items: 1 },
                 475: { items: 2 },
@@ -128,13 +125,15 @@ $(document).ready(function () {
         });
     }
 
-    initCarousel();
+    showCarousel();
 
 
-    
-    newFilter = () => {
+    showWorkGallery = () => {
 
-        $(".gallery").magnificPopup({
+        let $gallery = $(".gallery");
+        if ($gallery.attr("class") === undefined || $gallery.attr("class") === null) return;
+
+        $gallery.magnificPopup({
             delegate: 'a',
             type: 'image',
             gallery: {
@@ -144,21 +143,34 @@ $(document).ready(function () {
 
         });
 
-        const $gallery = $('.gallery').isotope({});
-        $('.filtering').on("click", 'span', function () {
-            const $span = $(this);
-            $span.addClass("active").siblings().removeClass("active");
-            let filterVal = $span.data('filter');
-            $gallery.isotope({ filter: filterVal });
+        $gallery.imagesLoaded(function () {
+            $gallery.isotope({});
+            $('.filtering').on("click", 'span', function () {
+                const $span = $(this);
+                $span.addClass("active").siblings().removeClass("active");
+                $gallery.isotope({ filter: $span.data('filter') });
+            });
         });
-        
-        $(".filtering span#all").click();
-
-
     }
 
-    newFilter();
-
-
+    showWorkGallery();
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
