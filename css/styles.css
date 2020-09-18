@@ -408,6 +408,14 @@ hr.separator {
 	left: 0%;
 }
 
+
+.stageContainer .stage-5 img {
+	max-height: 110px;
+	min-height: 110px;
+	padding: 0.2em;
+	background-color: #000;
+}
+
 .delay-1s {
 	animation-delay: 1s;
 }
