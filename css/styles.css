@@ -384,14 +384,23 @@ hr.separator {
 }
 
 .stageContainer .card .card-img-top {
-	border-top-left-radius: 5%;
-	border-top-right-radius: 5%;
+	border-top-left-radius: 8%;
+	border-top-right-radius: 8%;
 	min-height: 110px;
 	max-height: 110px;
 	max-width: 100%;
 	overflow: hidden;
 	padding: 0.2em;
 	background-color: #000;
+	display: flex;
+}
+
+.stageContainer .stage-5 img {
+	min-height: 110px;
+	max-height: 150px;
+	padding: 0.3em;
+	background-color: #000;
+	margin:auto;
 }
 
 .stageContainer .row .card .card-body {
@@ -406,14 +415,6 @@ hr.separator {
 
 .stageContainer .col.stage-1 {
 	left: 0%;
-}
-
-
-.stageContainer .stage-5 img {
-	max-height: 110px;
-	min-height: 110px;
-	padding: 0.2em;
-	background-color: #000;
 }
 
 .delay-1s {
