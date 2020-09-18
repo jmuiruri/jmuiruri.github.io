@@ -147,7 +147,7 @@ $(document).ready(function () {
         const $gallery = $('.gallery').isotope({});
         $('.filtering').on("click", 'span', function () {
             const $span = $(this);
-            $span.toggleClass("active").siblings().removeClass("active");
+            $span.addClass("active").siblings().removeClass("active");
             let filterVal = $span.data('filter');
             $gallery.isotope({ filter: filterVal });
         });
