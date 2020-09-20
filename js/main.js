@@ -4,31 +4,10 @@ $(document).ready(function () {
     getQH = () => $winHeight / ($(".top").hasClass(".tog-bg") ? 4 : 10);
     const halfHeight = $winHeight / 2, quarterHeight = getQH();
 
-    isElementInViewPort = ($el) => {
-        let $element = $el[0];
-        if ($element == undefined) return false;
-        let $rect = $element.getBoundingClientRect();
-        return ($rect.top >= 0 && $rect.left >= 0 && $rect.bottom <= $winHeight && $rect.right <= $winWidth);
-    }
-
-    let isAnimated = false;
-    let $process = $("#process-block");
-
-    animateProcess = ($element) => {
-        $element.find(".row>div:not(.w-100)").each((i, e) => {
-            let x = i + 1;
-            let anim = x > 1 ? "fadeInLeft" : "bounce";
-            const classList = "col stage-" + x + " animated " + anim + " delay-" + i + "s";
-            $(e).attr("class", classList);
-        });
-
-        isAnimated = true;
-    }
-
     let lastScrollPos = 0;
     const $nav = $("nav"), BORDER_BOTTOM = "border-bottom";
 
-    window.onscroll = () => {
+    const onScroll = () => {
         const scrollPos = window.top.scrollY;
 
         if (scrollPos > quarterHeight) {
@@ -48,23 +27,17 @@ $(document).ready(function () {
         }
 
         lastScrollPos = scrollPos;
-
-        if ($process === undefined) return;
-
-        if (isElementInViewPort($process) && !isAnimated) {
-            animateProcess($process);
-        }
-        // navHighlight(scrollPos);
-
     }
+    
+    window.onscroll = onScroll;
 
-    scroll = (targetSelector) => {
+    const scroll = (targetSelector) => {
         $("html,body").animate({
             scrollTop: $(targetSelector).offset().top - 100
         }, 1000);
     }
 
-    initPageSectionLinks = () => {
+    const initPageSectionLinks = () => {
         $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').not('[data-toggle="tab"]').on("click", function (e) {
             // On-page links
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -85,7 +58,7 @@ $(document).ready(function () {
 
     const $navToggle = $(".navbar-toggler");
 
-    initNavLinksClick = () => {
+    const initNavLinksClick = () => {
         $("a.nav-link:not(.dropdown-toggle)").on("click", function () {
             if ($winWidth < 768) $navToggle.click();
         });
@@ -105,13 +78,7 @@ $(document).ready(function () {
         window.open(link, "_blank");
     });
 
-    getPopupHtml = (index) => {
-        return '<a href="http://wottmakplus.com" target="_blank" class="visit btn btn-danger">Visit</a>';
-        // let html = [];
-        // return html[index];
-    }
-
-    showCarousel = () => {
+    const showCarousel = () => {
         $(".owl-carousel").owlCarousel({
             nav: false,
             loop: true,
@@ -128,7 +95,7 @@ $(document).ready(function () {
     showCarousel();
 
 
-    showWorkGallery = () => {
+    const showWorkGallery = () => {
 
         let $gallery = $(".gallery");
         if ($gallery.attr("class") === undefined || $gallery.attr("class") === null) return;
@@ -155,22 +122,17 @@ $(document).ready(function () {
 
     showWorkGallery();
 
+
+    const initAnimations = () => {
+        const wow = new WOW({
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true
+        });
+        wow.init();
+    }
+
+    initAnimations();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
